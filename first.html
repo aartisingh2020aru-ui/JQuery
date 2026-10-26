@@ -15,10 +15,59 @@
     <p>Click me away!</p>
     <p>Click me too!</p>
 
+<!-- ID Selector -->
+    <p id="message">Hello World</p>
+
+
+<!-- Class Selector -->
+    <p class="info">First paragraph</p>
+    <p class="info">Second paragraph</p>
+
+<!-- Element Selector -->
+    <p>First</p>
+    <p>Second</p>
+
+<!-- Universal Selector -->
+    <!-- (*) -->
+
+
+<!-- Group Selector -->
+    <!-- h1, p, button -->
+
+
+<!-- Attribute Selector -->
+ <input type="text" placeholder="Enter name">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+
     <script>
         $(function () {
             $("#btn").click(function () {
@@ -31,6 +80,37 @@
                 $(this).hide();
             });
         });
+
+
+
+// ````````ID Selector`````````````````
+        $("#message").css("color", "red");
+
+
+
+// ```````Class Selector```````````````
+
+        $(".info").css("color", "blue");
+
+
+// ```````Element Selector````````````
+        $("p").css("font-size", "20px");
+
+
+// ```````Universal Selector````````````
+        $("*").css("font-family", "Arial");
+
+
+// ```````Group Selector````````````````````````
+        $("h1, p, button").css("color", "green");
+
+
+// ```````Attribute Selector````````````````````````
+        $("input[type='text']").css("background-color", "lightyellow");
+
+
+
+
     </script>
 
 </body>
