@@ -15,50 +15,56 @@
     <p>Click me away!</p>
     <p>Click me too!</p>
 
-<!-- ID Selector -->
+    <!-- ID Selector -->
     <p id="message">Hello World</p>
 
 
-<!-- Class Selector -->
+    <!-- Class Selector -->
     <p class="info">First paragraph</p>
     <p class="info">Second paragraph</p>
 
-<!-- Element Selector -->
+    <!-- Element Selector -->
     <p>First</p>
     <p>Second</p>
 
-<!-- Universal Selector -->
+    <!-- Universal Selector -->
     <!-- (*) -->
 
 
-<!-- Group Selector -->
+    <!-- Group Selector -->
     <!-- h1, p, button -->
 
 
-<!-- Attribute Selector -->
- <input type="text" placeholder="Enter name">
+    <!-- Attribute Selector -->
+    <input type="text" placeholder="Enter name">
 
 
 
+    <!-- ========================================= -->
+
+    <!-- click event -->
+    <button id="btn2">click me</button>
+
+    <!-- double click event -->
+    <p id="para2">Double-click this para</p>
+
+    <!-- mouse enter event -->
+    <h2 id="heading2">move your mouse here</h2>
 
 
+    <!-- mouse leave event -->
+    <h3 id="heading3">move your mouse here</h3>
 
 
+    <!-- hover event -->
+    <p id="hoverText">move the mouse over me</p>
 
 
+    <!-- keypress event -->
+    <input type="text" id="name" placeholder="type somthing">
 
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- keydown event -->
+    <input type="text" id="text" placeholder="Enter your username">
 
 
 
@@ -75,38 +81,90 @@
             })
         });
 
-        $(document).ready(function () {
-            $("p").click(function () {
-                $(this).hide();
-            });
-        });
+        // $(document).ready(function () {
+        //     $("p").click(function () {
+        //         $(this).hide();
+        //     });
+        // });
 
 
 
-// ````````ID Selector`````````````````
+        // ````````ID Selector`````````````````
         $("#message").css("color", "red");
 
 
 
-// ```````Class Selector```````````````
+        // ```````Class Selector```````````````
 
         $(".info").css("color", "blue");
 
 
-// ```````Element Selector````````````
-        $("p").css("font-size", "20px");
+        // ```````Element Selector````````````
+        // $("p").css("font-size", "20px");
 
 
-// ```````Universal Selector````````````
+        // ```````Universal Selector````````````
         $("*").css("font-family", "Arial");
 
 
-// ```````Group Selector````````````````````````
+        // ```````Group Selector````````````````````````
         // $("h1, p, button").css("color", "green");
 
 
-// ```````Attribute Selector````````````````````````
+        // ```````Attribute Selector````````````````````````
         $("input[type='text']").css("background-color", "lightyellow");
+
+
+
+
+
+        // ===========================   EVENTs    ====================================================
+
+        // ```````click events````````````````````````
+        $("#btn2").click(function () {
+            alert("button clicked!");
+        });
+
+        // ```````double-click events````````````````````````
+        $("#para2").dblclick(function () {
+            $(this).css("color", "red");
+        });
+
+
+        // ```````mouse enter events````````````````````````
+        $("#heading2").mouseenter(function () {
+            $(this).css("background-color", "yellow");
+        });
+
+
+        // ```````mouse leave events````````````````````````
+        $("#heading3").mouseleave(function () {
+            $(this).css("background-color", "black");
+        });
+
+
+        // ``````` hover events````````````````````````
+        $("#hoverText").hover(function () {
+            $(this).css("color", "red");
+        },
+            function () {
+                $(this).css("color", "black");
+            });
+
+
+
+        // ``````` keypress events````````````````````````
+
+        $("#name").keypress(function () {
+            alert(" pressed!.")
+        })
+
+
+
+        // ``````` keydown events````````````````````````
+        $("#text").keydown(function () {
+            alert("A key was pressed!.")
+        })
 
 
 
